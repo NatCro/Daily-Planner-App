@@ -26,5 +26,22 @@ document.getElementById("currentDay").innerHTML = currentTime
 //seeing what the time is to change the colour of the block
 var timeCompare = parseInt(moment().format("HH"))
 
-console.log(timeCompare)
+
+for (let i = 1; i <= 12; i++) {
+    let element = document.getElementById(i);
+    if (timeCompare + "pm" === element.childNodes[1].innerHTML) {
+      console.log("hello");
+      element.childNodes[3].classList.add("present");
+    } else {
+    //   console.log(timeCompare + "pm");
+    //   console.log(element.getElementsByClassName("col-md-1").innerHTML)
+    }
+  }
+  
+
+
+
+// console.log(timeCompare + "am")
+
+// console.log(document.getElementById("1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11", "12").innerHTML)
 
