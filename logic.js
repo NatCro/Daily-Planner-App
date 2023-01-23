@@ -53,6 +53,26 @@ for (let i = selectedIndex + 1; i <= 12; i++) {
 }
 
 
+//on click the text is saved to the local storage
+let saveBtns = document.getElementsByClassName("saveBtn");
+for (let i = 0; i < saveBtns.length; i++) {
+    saveBtns[i].addEventListener("click", function() {
+        let textArea = this.parentElement.getElementsByTagName("textarea")[0];
+        let text = textArea.value;
+        localStorage.setItem(this.parentElement.id, text);
+    });
+}
+
+//retrieves save data and make sure it is in the text area
+let textAreas = document.getElementsByTagName("textarea");
+for (let i = 0; i < textAreas.length; i++) {
+    let text = localStorage.getItem(textAreas[i].parentElement.id);
+    if (text) {
+        textAreas[i].value = text;
+    }
+}
+
+
 
 
 
