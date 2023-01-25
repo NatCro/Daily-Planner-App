@@ -12,12 +12,6 @@ $(document).ready(function(){
 })
 })
 
-//variable for current time to compare to each section
-
-// function to check for the current time and check the colour is correct (change the class to reflect the colour?)
-
-//save text to the box by logging to local storage
-
 //display current date/time at the top of the page
 var currentTime = moment().format("dddd MM YYYY HH:mm")
 document.getElementById("currentDay").innerHTML = currentTime
